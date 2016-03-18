@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Yanring</string>
+    <string name="splash_text">极客班启动页面</string>
+    <string name="click_to_enter">点击进入</string>
+    <string name="hello_world">Hello World Hello World Hello World Hello World Hello World</string>
+    <string name="phone_book">电话本</string>
+    <string name="android_guide">官方指导</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="handler_text_view_text">极客班教学 Handler</string>
+</resources>

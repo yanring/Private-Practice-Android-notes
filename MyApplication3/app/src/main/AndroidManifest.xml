@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.yanring.myapplication"
+          android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/geekband"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity"/>
+        <activity android:name=".Yanringtest"/>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ButtonActivity"/>
+        <activity android:name=".DatabaseButtonActivity"/>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.yanring.myapplication.MainActivity"/>
+        </activity>
+        <activity android:name=".ListViewDemoActivity"/>
+        <activity android:name=".GridViewDemoActivity"/>
+        <activity android:name=".TestViewButtonActivity"/>
+        <activity android:name=".TestViewFragmentActivity"/>
+        <activity android:name=".HandlerButtonActivity"/>
+        <activity android:name=".MusicButtonActivity"/>
+        <activity android:name=".SendBroadcastActivity"/>
+        <service android:name=".MusicService"/>
+        <receiver android:name=".TestBroadcastReciver">
+            <intent-filter>
+                <action android:name="com.yanring.broadcast">
+
+                </action>
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".TestWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@layout/setting_widget"/>
+        </receiver>
+
+        <activity android:name=".NetworkActivity"/>
+
+        <provider
+            android:authorities="com.example.yanring.myapplication"
+            android:name=".provider.TestContentProvider"/>
+    </application>
+
+</manifest>
